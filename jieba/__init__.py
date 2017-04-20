@@ -300,7 +300,10 @@ class Tokenizer(object):
                 continue
             if re_han.match(blk):
                 for word in cut_block(blk):
-                    yield word
+                    tmp1 = test.split(word)
+                    for xx in tmp1:
+                        yield xx
+                    #yield word
             else:
                 tmp = re_skip.split(blk)
                 for x in tmp:
